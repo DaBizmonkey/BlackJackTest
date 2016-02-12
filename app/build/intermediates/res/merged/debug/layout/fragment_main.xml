@@ -21,20 +21,22 @@
         android:id="@+id/textView" />
 
 
-
-
-        
-
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="100px"
             android:text="Up"
             android:id="@+id/buttonup"
-            android:layout_gravity="bottom|center"
+            android:layout_gravity="center"
             android:background="@null"
             android:src="@drawable/hit"
             android:onClick="clickMethodUp"/>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -44,19 +46,21 @@
             android:onClick="clickMethodDown"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Shuffle"
-            android:id="@+id/buttonshuffle"
-            android:layout_gravity="center"
-            android:onClick="clickMethodShuffle"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shuffle"
+                android:id="@+id/buttonshuffle"
+                android:layout_gravity="center"
+                android:onClick="clickMethodShuffle"/>
+
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Reset"
-            android:id="@+id/buttonreset"
-            android:layout_gravity="center"
-            android:onClick="clickMethodReset"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reset"
+                android:id="@+id/buttonreset"
+                android:layout_gravity="center"
+                android:onClick="clickMethodReset"/>
+    </LinearLayout>
 
 
 </FrameLayout>

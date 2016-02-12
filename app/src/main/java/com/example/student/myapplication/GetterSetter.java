@@ -6,6 +6,8 @@ package com.example.student.myapplication;
 public class GetterSetter {
     static Card[] cards;
     static int current;
+    static int current1;
+    static int current2;
     static String thing = "";
 
 

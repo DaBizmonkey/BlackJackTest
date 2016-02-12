@@ -3,64 +3,63 @@ package com.example.student.myapplication;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
 
 /**
  * Created by preston on 1/26/16.
  */
 public class CardDraw {
-    Bitmap twoclubs;
-    Bitmap threeclubs;
-    Bitmap fourclubs;
-    Bitmap fiveclubs;
-    Bitmap sixclubs;
-    Bitmap sevenclubs;
-    Bitmap eightclubs;
-    Bitmap nineclubs;
-    Bitmap tenclubs;
-    Bitmap jackclubs;
-    Bitmap kingclubs;
-    Bitmap queenclubs;
-    Bitmap aceclubs;
-    Bitmap twohearts;
-    Bitmap threehearts;
-    Bitmap fourhearts;
-    Bitmap fivehearts;
-    Bitmap sixhearts;
-    Bitmap sevenhearts;
-    Bitmap eighthearts;
-    Bitmap ninehearts;
-    Bitmap tenhearts;
-    Bitmap jackhearts;
-    Bitmap kinghearts;
-    Bitmap queenhearts;
-    Bitmap acehearts;
-    Bitmap twospades;
-    Bitmap threespades;
-    Bitmap fourspades;
-    Bitmap fivespades;
-    Bitmap sixspades;
-    Bitmap sevenspades;
-    Bitmap eightspades;
-    Bitmap ninespades;
-    Bitmap tenspades;
-    Bitmap jackspades;
-    Bitmap kingspades;
-    Bitmap queenspades;
-    Bitmap acespades;
-    Bitmap twodiamonds;
-    Bitmap threediamonds;
-    Bitmap fourdiamonds;
-    Bitmap fivediamonds;
-    Bitmap sixdiamonds;
-    Bitmap sevendiamonds;
-    Bitmap eightdiamonds;
-    Bitmap ninediamonds;
-    Bitmap tendiamonds;
-    Bitmap jackdiamonds;
-    Bitmap kingdiamonds;
-    Bitmap queendiamonds;
-    Bitmap acediamonds;
+    static Bitmap twoclubs;
+    static Bitmap threeclubs;
+    static Bitmap fourclubs;
+    static Bitmap fiveclubs;
+    static Bitmap sixclubs;
+    static Bitmap sevenclubs;
+    static Bitmap eightclubs;
+    static Bitmap nineclubs;
+    static Bitmap tenclubs;
+    static Bitmap jackclubs;
+    static Bitmap kingclubs;
+    static Bitmap queenclubs;
+    static Bitmap aceclubs;
+    static Bitmap twohearts;
+    static Bitmap threehearts;
+    static Bitmap fourhearts;
+    static Bitmap fivehearts;
+    static Bitmap sixhearts;
+    static Bitmap sevenhearts;
+    static Bitmap eighthearts;
+    static Bitmap ninehearts;
+    static Bitmap tenhearts;
+    static Bitmap jackhearts;
+    static Bitmap kinghearts;
+    static Bitmap queenhearts;
+    static Bitmap acehearts;
+    static Bitmap twospades;
+    static Bitmap threespades;
+    static Bitmap fourspades;
+    static Bitmap fivespades;
+    static Bitmap sixspades;
+    static Bitmap sevenspades;
+    static Bitmap eightspades;
+    static Bitmap ninespades;
+    static Bitmap tenspades;
+    static Bitmap jackspades;
+    static Bitmap kingspades;
+    static Bitmap queenspades;
+    static Bitmap acespades;
+    static Bitmap twodiamonds;
+    static Bitmap threediamonds;
+    static Bitmap fourdiamonds;
+    static Bitmap fivediamonds;
+    static Bitmap sixdiamonds;
+    static Bitmap sevendiamonds;
+    static Bitmap eightdiamonds;
+    static Bitmap ninediamonds;
+    static Bitmap tendiamonds;
+    static Bitmap jackdiamonds;
+    static Bitmap kingdiamonds;
+    static Bitmap queendiamonds;
+    static Bitmap acediamonds;
 
     public CardDraw(Context context) {
         twoclubs = BitmapFactory.decodeResource(context.getResources(), R.drawable.twoclubs);
@@ -169,123 +168,124 @@ public class CardDraw {
         acespades = Bitmap.createScaledBitmap(acespades, acespades.getWidth() / 3, acespades.getHeight() / 3, false);
     }
 
-    public void deal(Canvas canvas) {
-        if (GetterSetter.cards[GetterSetter.current].suit == 0) {
+    public static Bitmap getBitmap(int suit, int rank) {
+        if (suit == 0) {
             GetterSetter.setThing("clubs");
-            if (GetterSetter.cards[GetterSetter.current].rank == 0) {
-                canvas.drawBitmap(twoclubs, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 1) {
-                canvas.drawBitmap(threeclubs, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 2) {
-                canvas.drawBitmap(fourclubs, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 3) {
-                canvas.drawBitmap(fiveclubs, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 4) {
-                canvas.drawBitmap(sixclubs, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 5) {
-                canvas.drawBitmap(sevenclubs, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 6) {
-                canvas.drawBitmap(eightclubs, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 7) {
-                canvas.drawBitmap(nineclubs, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 8) {
-                canvas.drawBitmap(tenclubs, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 9) {
-                canvas.drawBitmap(jackclubs, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 10) {
-                canvas.drawBitmap(queenclubs, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 11) {
-                canvas.drawBitmap(kingclubs, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 12) {
-                canvas.drawBitmap(aceclubs, 750.0f, 0.0f, null);
+            if (rank == 0) {
+                return twoclubs;
+            } else if (rank == 1) {
+                return threeclubs;
+            } else if (rank == 2) {
+                return fourclubs;
+            } else if (rank == 3) {
+                return fiveclubs;
+            } else if (rank == 4) {
+                return sixclubs;
+            } else if (rank == 5) {
+                return sevenclubs;
+            } else if (rank == 6) {
+                return eightclubs;
+            } else if (rank == 7) {
+                return nineclubs;
+            } else if (rank == 8) {
+                return tenclubs;
+            } else if (rank == 9) {
+                return jackclubs;
+            } else if (rank == 10) {
+                return queenclubs;
+            } else if (rank == 11) {
+                return kingclubs;
+            } else if (rank == 12) {
+                return aceclubs;
             }
-        } else if (GetterSetter.cards[GetterSetter.current].suit == 1) {
+        } else if (suit == 1) {
             GetterSetter.setThing("diamonds");
-            if (GetterSetter.cards[GetterSetter.current].rank == 0) {
-                canvas.drawBitmap(twodiamonds, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 1) {
-                canvas.drawBitmap(threediamonds, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 2) {
-                canvas.drawBitmap(fourdiamonds, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 3) {
-                canvas.drawBitmap(fivediamonds, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 4) {
-                canvas.drawBitmap(sixdiamonds, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 5) {
-                canvas.drawBitmap(sevendiamonds, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 6) {
-                canvas.drawBitmap(eightdiamonds, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 7) {
-                canvas.drawBitmap(ninediamonds, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 8) {
-                canvas.drawBitmap(tendiamonds, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 9) {
-                canvas.drawBitmap(jackdiamonds, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 10) {
-                canvas.drawBitmap(queendiamonds, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 11) {
-                canvas.drawBitmap(kingdiamonds, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 12) {
-                canvas.drawBitmap(acediamonds, 750.0f, 0.0f, null);
+            if (rank == 0) {
+                return twodiamonds;
+            } else if (rank == 1) {
+                return threediamonds;
+            } else if (rank == 2) {
+                return fourdiamonds;
+            } else if (rank == 3) {
+                return fivediamonds;
+            } else if (rank == 4) {
+                return sixdiamonds;
+            } else if (rank == 5) {
+                return sevendiamonds;
+            } else if (rank == 6) {
+                return eightdiamonds;
+            } else if (rank == 7) {
+                return ninediamonds;
+            } else if (rank == 8) {
+                return tendiamonds;
+            } else if (rank == 9) {
+                return jackdiamonds;
+            } else if (rank == 10) {
+                return queendiamonds;
+            } else if (rank == 11) {
+                return kingdiamonds;
+            } else if (rank == 12) {
+                return acediamonds;
             }
-        } else if (GetterSetter.cards[GetterSetter.current].suit == 2) {
+        } else if (suit == 2) {
             GetterSetter.setThing("spades");
-            if (GetterSetter.cards[GetterSetter.current].rank == 0) {
-                canvas.drawBitmap(twospades, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 1) {
-                canvas.drawBitmap(threespades, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 2) {
-                canvas.drawBitmap(fourspades, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 3) {
-                canvas.drawBitmap(fivespades, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 4) {
-                canvas.drawBitmap(sixspades, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 5) {
-                canvas.drawBitmap(sevenspades, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 6) {
-                canvas.drawBitmap(eightspades, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 7) {
-                canvas.drawBitmap(ninespades, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 8) {
-                canvas.drawBitmap(tenspades, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 9) {
-                canvas.drawBitmap(jackspades, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 10) {
-                canvas.drawBitmap(queenspades, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 11) {
-                canvas.drawBitmap(kingspades, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 12) {
-                canvas.drawBitmap(acespades, 750.0f, 0.0f, null);
+            if (rank == 0) {
+                return twospades;
+            } else if (rank == 1) {
+                return threespades;
+            } else if (rank == 2) {
+                return fourspades;
+            } else if (rank == 3) {
+                return fivespades;
+            } else if (rank == 4) {
+                return sixspades;
+            } else if (rank == 5) {
+                return sevenspades;
+            } else if (rank == 6) {
+                return eightspades;
+            } else if (rank == 7) {
+                return ninespades;
+            } else if (rank == 8) {
+                return tenspades;
+            } else if (rank == 9) {
+                return jackspades;
+            } else if (rank == 10) {
+                return queenspades;
+            } else if (rank == 11) {
+                return kingspades;
+            } else if (rank == 12) {
+                return acespades;
             }
-        } else if (GetterSetter.cards[GetterSetter.current].suit == 3) {
+        } else if (suit == 3) {
             GetterSetter.setThing("hearts");
-            if (GetterSetter.cards[GetterSetter.current].rank == 0) {
-                canvas.drawBitmap(twohearts, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 1) {
-                canvas.drawBitmap(threehearts, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 2) {
-                canvas.drawBitmap(fourhearts, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 3) {
-                canvas.drawBitmap(fivehearts, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 4) {
-                canvas.drawBitmap(sixhearts, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 5) {
-                canvas.drawBitmap(sevenhearts, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 6) {
-                canvas.drawBitmap(eighthearts, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 7) {
-                canvas.drawBitmap(ninehearts, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 8) {
-                canvas.drawBitmap(tenhearts, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 9) {
-                canvas.drawBitmap(jackhearts, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 10) {
-                canvas.drawBitmap(queenhearts, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 11) {
-                canvas.drawBitmap(kinghearts, 750.0f, 0.0f, null);
-            } else if (GetterSetter.cards[GetterSetter.current].rank == 12) {
-                canvas.drawBitmap(acehearts, 750.0f, 0.0f, null);
+            if (rank == 0) {
+                return twohearts;
+            } else if (rank == 1) {
+                return threehearts;
+            } else if (rank == 2) {
+                return fourhearts;
+            } else if (rank == 3) {
+                return fivehearts;
+            } else if (rank == 4) {
+                return sixhearts;
+            } else if (rank == 5) {
+                return sevenhearts;
+            } else if (rank == 6) {
+                return eighthearts;
+            } else if (rank == 7) {
+                return ninehearts;
+            } else if (rank == 8) {
+                return tenhearts;
+            } else if (rank == 9) {
+                return jackhearts;
+            } else if (rank == 10) {
+                return queenhearts;
+            } else if (rank == 11) {
+                return kinghearts;
+            } else if (rank == 12) {
+                return acehearts;
             }
         }
+        return acespades;
     }
 }

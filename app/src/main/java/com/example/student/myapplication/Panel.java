@@ -52,8 +52,9 @@ public class Panel extends SurfaceView implements SurfaceHolder.Callback{
     public void onDraw(Canvas canvas) {
 
         canvas.drawColor(Color.BLACK);
-        cardDraw.deal(canvas);
-
+        canvas.drawBitmap(GetterSetter.cards[GetterSetter.current].bmap, 0.0f, 1000.0f, null);
+        canvas.drawBitmap(GetterSetter.cards[GetterSetter.current1].bmap, 400.0f, 1000.0f, null);
+        canvas.drawBitmap(GetterSetter.cards[GetterSetter.current2].bmap, 800.0f, 1000.0f, null);
 
 
 

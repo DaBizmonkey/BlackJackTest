@@ -35,6 +35,8 @@ Button but;
         tv.setTextColor(Color.WHITE);
 
 
+
+
          
 rootView.setBackgroundColor(Color.BLACK);
 
@@ -48,6 +50,7 @@ rootView.setBackgroundColor(Color.BLACK);
         for (int suit = 0; suit < 4; suit++) {
             for (int rank = 0; rank < 13; rank++) {
                 GetterSetter.cards[suit * 13 + rank] = new Card(suit, rank);
+                GetterSetter.cards[suit * 13 + rank].bmap = CardDraw.getBitmap(suit, rank);
             }
         }
     }
