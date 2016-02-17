@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
  * Created by preston on 1/14/16.
  */
 public class Card {
+
     int suit = 0;
     int rank = 0;
     int num;
